@@ -17,12 +17,12 @@ can set up some macros.
 ## Parts List
 
 | Item | Price |
-| ---- | ----- |
+| ---- | -----:|
 | [Easyget 5v 100mm Dome Shaped Jumbo LED... (Amazon)][button-amazon] | $13 |
 | [Generic 200x120x75mm Project Enclosure (Amazon)][box-amazon] | $13 |
 | ATTINY85 Digispark Board (AliExpress) | <$1 |
-| [Panel-mount USB Type B Connector][usb-amazon] | $9 |
-| Various wires, connectors, etc. |  |
+| [Panel-mount USB Type B Connector (Amazon)][usb-amazon] | $9 |
+| Various wires, connectors, etc. | ? |
 | **Total** | ~$36 |
 
 [button-amazon]: https://www.amazon.com/Easyget-Shaped-Illuminated-Self-resetting-Projects/dp/B00XRC9URW
