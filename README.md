@@ -1,7 +1,7 @@
 # the-button
 A big red button.
 
-TODO: add image
+![Image of the button (with a lot of dust on it.)](img/button.png)
 
 ## What?
 
