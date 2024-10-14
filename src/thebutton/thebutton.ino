@@ -8,7 +8,7 @@
 #define PIN_LED 1
 
 // Uncomment to send a single keystroke
-#define KEYSTROKE KEY_F // to pay respects
+// #define KEYSTROKE KEY_F // to pay respects
 
 // Uncomment to to send a keystroke + modifier
 // #define KEYSTROKE KEY_L
@@ -16,6 +16,11 @@
 
 // Uncomment to send a string
 // #define KEY_MESSAGE "github.com/Chris-Johnston/the-button"
+
+// Sends LSHIFT + RSHIFT ~ ~ to trigger a BSOD.
+#define KEY_GRAVE 0x35 // Keyboard ` and ~
+#define BSOD 1
+#define LSHIFT_RSHIFT (MOD_SHIFT_LEFT | MOD_SHIFT_RIGHT)
 
 #define DEBOUNCE_MS 50
 
@@ -71,10 +76,19 @@ void loop()
             #ifdef KEY_MESSAGE
             DigiKeyboard.write(KEY_MESSAGE);
             #endif
+
+            #ifdef BSOD
+
+            DigiKeyboard.sendKeyPress(KEY_GRAVE, LSHIFT_RSHIFT);
+            DigiKeyboard.sendKeyPress(0, LSHIFT_RSHIFT);
+            DigiKeyboard.sendKeyPress(KEY_GRAVE, LSHIFT_RSHIFT);
+            DigiKeyboard.sendKeyPress(0, LSHIFT_RSHIFT);
+
+            #endif
         }
         else
         {
-            #ifdef KEYSTROKE
+            #if defined(KEYSTROKE) or defined(BSOD)
             // release
             DigiKeyboard.sendKeyPress(0);
             #endif
